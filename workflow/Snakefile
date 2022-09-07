@@ -1,0 +1,18 @@
+# Description of workflow
+
+shell.executable('/bin/bash')
+
+configfile: 'config/config.yaml'
+
+rule all:
+    input:
+        'results/result.file'
+
+rule example:
+    input: '/dev/null'
+    output: 'results/result.file'
+    conda: 'envs/example.yaml'
+    shell:
+        '''
+echo spam > {output}
+'''

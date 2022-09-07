@@ -1,0 +1,8 @@
+name: example_env
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - package=version
